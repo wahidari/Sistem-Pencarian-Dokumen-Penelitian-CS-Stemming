@@ -1,0 +1,42 @@
+<!--<!–– Created on Fri Jul 19 23:25:26 2019-->
+<!--@author: wahidari ––>-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Page Not Found</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+<body>
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="error-template">
+                <h1>
+                    Oops!</h1>
+                <h2>
+                    404 Not Found</h2>
+                <div class="error-details">
+                    Sorry, an error has occured, Requested page not found!
+                </div>
+                <br>
+                <div class="error-actions">
+                    <a href="{{url_for('page_home')}}" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span>
+                        Take Me Home </a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+</body>
+</html>
